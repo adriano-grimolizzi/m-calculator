@@ -1,37 +1,37 @@
-<h1 [ngStyle]="magrielStyle">
-  M: {{magriel | number:'1.0-2'}}
-</h1>
-
-<div class="wrap">
-  <label>Stack:
-    <input type="number"
-           min="1"
-           [(ngModel)]="stack"/>
-  </label>
-
-  <label>Big Blind:
-    <input type="number"
-           min="1"
-           [(ngModel)]="bigBlind"/>
-  </label>
-
-  <label>Ante:
-    <input type="number"
-           min="0"
-           [(ngModel)]="ante"/>
-  </label>
-
-  <label>Number of Players:
-    <input type="number"
-           min="2"
-           max="10"
-           [(ngModel)]="numberOfPlayers"/>
-  </label>
-
-  stack {{stack}}
-  bb {{bigBlind}}
-  sb {{smallBlind}}
-  ante {{ante}}
-  players {{numberOfPlayers | json}}
+<div class="app-container">
+  <h1 class="magriel"
+      [ngStyle]="magrielStyle">
+    {{magriel | number:'1.0-2'}}
+  </h1>
+  <mat-divider></mat-divider>
+  <div class="wrap">
+    <label>Stack:
+      <input type="number"
+             min="1"
+             [(ngModel)]="stack"/>
+    </label>
+    <mat-divider></mat-divider>
+    <label>Big Blind:
+      <input type="number"
+             min="1"
+             [(ngModel)]="bigBlind"/>
+    </label>
+    <mat-divider></mat-divider>
+    <label>Ante:
+      <input type="number"
+             min="0"
+             [(ngModel)]="ante"/>
+    </label>
+    <mat-divider></mat-divider>
+    <div>
+      <label>Number of Players:</label><div class="number-of-players">{{numberOfPlayers}}</div>
+    </div>
+    <mat-slider [max]="10"
+                [min]="2"
+                [step]="1"
+                [tickInterval]="1"
+                [thumbLabel]="true"
+                [(ngModel)]="numberOfPlayers">
+    </mat-slider>
+  </div>
 </div>
-

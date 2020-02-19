@@ -15,16 +15,21 @@ export class AppComponent {
 
   public numberOfPlayers = 9;
 
-  get smallBlind(): number { return this.bigBlind ? this.bigBlind / 2 : 0; }
+  get smallBlind(): number {
+    return this.bigBlind ? this.bigBlind / 2 : 0;
+  }
 
-  get magriel(): number { return this.stack / (this.smallBlind + this.bigBlind + this.ante * this.numberOfPlayers); }
+  get magriel(): number {
+    return this.stack / (this.smallBlind + this.bigBlind + this.ante * this.numberOfPlayers);
+  }
+
+  // get effectiveMagriel(): number { return this.magriel * (this.numberOfPlayers / 10); }
 
   get color(): string {
     if (this.magriel < 1) { return 'gray'; } else
     if (this.magriel < 5) { return 'red'; } else
     if (this.magriel < 10) { return 'orange'; } else { return 'green'; }
   }
-  // get effectiveMagriel(): number { return this.magriel * (this.numberOfPlayers / 10); }
 
   get magrielStyle() {
     return { 'color': this.color };

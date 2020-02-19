@@ -1,4 +1,37 @@
+.app-container {
+  background-color: floralwhite;
+  width: 300px;
+  padding: 20px;
+  margin: 10px;
+}
+
+.magriel {
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+  font-size: 120px;
+  text-shadow: 2px 2px 4px gray;
+  margin: 0;
+}
+
+input {
+  float: right;
+}
+
 .wrap {
   display:flex;
   flex-direction: column;
+}
+
+mat-divider {
+  margin: 10px;
+}
+mat-slider {
+  width: 300px;
+  margin-top: 20px;
+  padding-bottom: 0;
+}
+
+.number-of-players {
+  float: right;
 }
