@@ -1,5 +1,5 @@
 .app-container {
-  background-color: floralwhite;
+  background-color: var(--main-bg-color);
   width: 300px;
   padding: 20px;
   margin: 10px;
@@ -12,10 +12,27 @@
   font-size: 120px;
   text-shadow: 2px 2px 4px gray;
   margin: 0;
+  overflow: hidden;
+}
+
+.statistics {
+  text-align: right;
+  font-family: "Arial", Times, serif;
+  font-weight: bold;
+  font-size: 30px;
 }
 
 input {
+  background-color: var(--main-bg-color);
+  width: 200px;
+  outline: none;
   float: right;
+  border: none;
+}
+
+input:focus {
+  border: none;
+  border-bottom: 2px solid red;
 }
 
 .wrap {
@@ -24,7 +41,7 @@ input {
 }
 
 mat-divider {
-  margin: 10px;
+  margin: 10px 100px;
 }
 mat-slider {
   width: 300px;
@@ -34,4 +51,5 @@ mat-slider {
 
 .number-of-players {
   float: right;
+  margin-right: 16px;
 }

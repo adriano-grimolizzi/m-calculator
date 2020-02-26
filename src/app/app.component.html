@@ -1,32 +1,41 @@
 <div class="app-container">
+
   <h1 class="magriel"
       [ngStyle]="magrielStyle">
     {{magriel | number:'1.0-2'}}
   </h1>
+
   <mat-divider></mat-divider>
+
   <div class="wrap">
     <label>Stack:
       <input type="number"
              min="1"
+             class="statistics"
              [(ngModel)]="stack"/>
     </label>
     <mat-divider></mat-divider>
     <label>Big Blind:
       <input type="number"
              min="1"
+             class="statistics"
              [(ngModel)]="bigBlind"/>
     </label>
     <mat-divider></mat-divider>
     <label>Ante:
       <input type="number"
              min="0"
+             class="statistics"
              [(ngModel)]="ante"/>
     </label>
     <mat-divider></mat-divider>
     <div>
-      <label>Number of Players:</label><div class="number-of-players">{{numberOfPlayers}}</div>
+      <label>Number of Players:</label>
+      <div class="number-of-players statistics">{{numberOfPlayers}}</div>
     </div>
-    <mat-slider [max]="10"
+    <mat-slider class="statistics"
+                color="primary"
+                [max]="10"
                 [min]="2"
                 [step]="1"
                 [tickInterval]="1"

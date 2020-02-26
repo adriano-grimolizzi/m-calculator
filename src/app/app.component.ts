@@ -7,11 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  public stack = 6;
+  public stack = 3000;
 
-  public bigBlind = 1;
+  public bigBlind = 100;
 
-  public ante = 0;
+  public ante = 25;
 
   public numberOfPlayers = 9;
 
